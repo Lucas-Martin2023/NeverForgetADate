@@ -1,0 +1,56 @@
+{
+  "-NizoR9cywHnCGZqtGYj": {
+    "firebaseKey": "-NizoR9cywHnCGZqtGYj",
+    "uid": "2FvtG6S201aXiUlzk7yelQ4sCEI3",
+    "eventId": "-NiznbjIqEoRsOpi9VbZ",
+    "title": "Sunset Bike Ride",
+    "image": "http://dummyimage.com/148x100.png/ff4444/ffffff",
+    "rating": 2,
+    "description": "orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit"
+  },
+  "-NizoR9erEbFQP2_CLU3": {
+    "firebaseKey": "-NizoR9erEbFQP2_CLU3",
+    "uid": "2FvtG6S201aXiUlzk7yelQ4sCEI3",
+    "eventId": "-NiznbjIqEoRsOpi9VbZ",
+    "title": "Colorado Snowboarding",
+    "image": "http://dummyimage.com/148x100.png/cc0000/ffffff",
+    "rating": 3,
+    "description": "pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique"
+  },
+  "-NizoR9gZtp8sTei7HGW": {
+    "firebaseKey": "-NizoR9gZtp8sTei7HGW",
+    "uid": "2FvtG6S201aXiUlzk7yelQ4sCEI3",
+    "eventId": "-NiznbjKVCa-vO8ovPg-",
+    "title": "Christmas Party",
+    "image": "http://dummyimage.com/154x100.png/5fa2dd/ffffff",
+    "rating": 3,
+    "description": "in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis"
+  },
+  "-NizoR9icOjlVfd6QX2J": {
+    "firebaseKey": "-NizoR9icOjlVfd6QX2J",
+    "uid": "2FvtG6S201aXiUlzk7yelQ4sCEI3",
+    "eventId": "-NiznbjLv8lRh0nMt-fm",
+    "title": "Fujiyama Sushi",
+    "image": "http://dummyimage.com/117x100.png/cc0000/ffffff",
+    "rating": 2,
+    "description": "eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum"
+  },
+  "-NizoR9k6nvOv-MQMjO-": {
+    "firebaseKey": "-NizoR9k6nvOv-MQMjO-",
+    "uid": "2FvtG6S201aXiUlzk7yelQ4sCEI3",
+    "eventId": "-NiznbjMetmoZYvXZIqX",
+    "title": "Taylor Smift Concert",
+    "image": "http://dummyimage.com/155x100.png/dddddd/000000",
+    "rating": 1,
+    "description": "parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus"
+  },
+  "-Nj-4JA7tvPP-5iOQn-v": {
+    "firebaseKey": "-Nj-4JA7tvPP-5iOQn-v",
+    "uid": "2FvtG6S201aXiUlzk7yelQ4sCEI3",
+    "eventId": "-NiznbjJDLGcW8szpde7",
+    "title": "Watched Moana",
+    "image": "http://dummyimage.com/141x100.png/dddddd/000000",
+    "rating": 1,
+    "description": "parturient montes nascetur ridiculus m"
+  }
+}
