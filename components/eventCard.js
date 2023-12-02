@@ -25,6 +25,7 @@ function EventCard({ eventObj, onUpdate, imageUrls }) {
             src={imageUrl}
             alt={`${eventObj.title} - Date ${index + 1}`}
             className="card-img-top"
+            style={{ width: '200px', height: '150px', margin: '5px' }}
           />
         ))}
         <Link href={`/event/${eventObj.firebaseKey}`} passHref>
