@@ -18,7 +18,6 @@ function DateForm({ obj }) {
   const [setDates] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
-  const [selectedEvent, setSelectedEvent] = useState('');
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -27,7 +26,9 @@ function DateForm({ obj }) {
 
   useEffect(() => {
     getAllDates(user.uid).then(setDates);
-    if (obj.firebaseKey) setFormInput(obj);
+    if (obj.firebaseKey) {
+      setFormInput(obj);
+    }
   }, [obj, user]);
 
   const handleChange = (e) => {
@@ -41,14 +42,9 @@ function DateForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!selectedEvent) {
-      return;
-    }
-
     const payload = {
       ...formInput,
       uid: user.uid,
-      eventId: selectedEvent,
     };
 
     if (obj.firebaseKey) {
@@ -120,9 +116,9 @@ function DateForm({ obj }) {
           <Form.Label>Was this date part of an event:</Form.Label>
           <Form.Control
             as="select"
-            name="event"
-            value={selectedEvent}
-            onChange={(e) => setSelectedEvent(e.target.value)}
+            name="eventId"
+            value={formInput.eventId}
+            onChange={handleChange}
             required
           >
             <option value="" disabled>Select an event</option>
@@ -144,6 +140,7 @@ function DateForm({ obj }) {
 
 DateForm.propTypes = {
   obj: PropTypes.shape({
+    eventId: PropTypes.string,
     title: PropTypes.string,
     image: PropTypes.string,
     rating: PropTypes.string,
