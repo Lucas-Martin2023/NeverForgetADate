@@ -1,15 +1,21 @@
+// imports credentials from another file
 import { clientCredentials } from '../utils/client';
 
+// storing the database URL in a variable
 const endpoint = clientCredentials.databaseURL;
 
+// function to get all dates for a user
 const getAllDates = (uid) => new Promise((resolve, reject) => {
+  // Fetching data from the server based on the user ID
   fetch(`${endpoint}/dates.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
+    // handling the response by converting it to JSON
     .then((response) => response.json())
+    // resolving the Promise with the dates if available, or an empty array if not
     .then((data) => {
       if (data) {
         resolve(Object.values(data));
@@ -17,6 +23,7 @@ const getAllDates = (uid) => new Promise((resolve, reject) => {
         resolve([]);
       }
     })
+    // handling errors by rejecting the Promise
     .catch(reject);
 });
 
@@ -70,10 +77,23 @@ const deleteSingleDate = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getDatesForEvent = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/dates.json?orderBy="eventId"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
   getAllDates,
   getSingleDate,
   createDate,
   updateDate,
   deleteSingleDate,
+  getDatesForEvent,
 };

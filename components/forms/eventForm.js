@@ -36,9 +36,8 @@ function EventForm({ obj }) {
       updateEvent(formInput).then(() => router.push('/events/'));
     } else {
       const payload = { ...formInput, uid: user.uid };
-      createEvent(payload).then(({ title }) => {
-        const patchPayload = { firebaseKey: title };
-
+      createEvent(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
         updateEvent(patchPayload).then(() => {
           router.push('/events');
         });
@@ -66,7 +65,8 @@ function EventForm({ obj }) {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Date</Form.Label>
           <Form.Control
-            type="text"
+            type="date"
+            format="MM/dd/yyyy"
             placeholder="Enter Date of Event"
             name="date"
             value={formInput.date}
