@@ -4,27 +4,22 @@ import { clientCredentials } from '../utils/client';
 // storing the database URL in a variable
 const endpoint = clientCredentials.databaseURL;
 
-// function to get all dates for a user
-const getAllDates = (uid) => new Promise((resolve, reject) => {
-  // Fetching data from the server based on the user ID
-  fetch(`${endpoint}/dates.json?orderBy="uid"&equalTo="${uid}"`, {
+const getAllDates = (uid) => new Promise((resolve, reject) => { // function to get all dates for a user
+  fetch(`${endpoint}/dates.json?orderBy="uid"&equalTo="${uid}"`, { // Fetching data from the server based on the user ID
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
-    // handling the response by converting it to JSON
-    .then((response) => response.json())
-    // resolving the Promise with the dates if available, or an empty array if not
-    .then((data) => {
+    .then((response) => response.json()) // handling the response by converting it to JSON
+    .then((data) => { // resolving the Promise with the dates if available, or an empty array if not
       if (data) {
         resolve(Object.values(data));
       } else {
         resolve([]);
       }
     })
-    // handling errors by rejecting the Promise
-    .catch(reject);
+    .catch(reject); // handling errors by rejecting the Promise
 });
 
 const getSingleDate = (firebaseKey) => new Promise((resolve, reject) => {
