@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'; // Import React, useEffect, and useState from the React library.
 import { getAllDates } from '../api/dateData'; // Import the getAllDates function from the specified API file.
 import { useAuth } from '../utils/context/authContext'; // Import the useAuth hook from the specified context file.
-import DateCard from '../components/DateCard'; // Import the DateCard component from the specified file.
+import DateCard from '../components/dateCard'; // Import the DateCard component from the specified file.
 
 function ShowDates() { // Define the ShowDates component function.
   const [dates, setDates] = useState([]); // Declare state variable dates and a function to update it using the useState hook.

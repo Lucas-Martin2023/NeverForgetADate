@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Import React library for creating React components.
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'; // Import the useRouter hook from Next.js for accessing the router object.
 import PropTypes from 'prop-types'; // Import PropTypes library for defining component prop types.
 import { Button, Form } from 'react-bootstrap'; // Import Button and Form components from the react-bootstrap library.

@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router'; // Import the useRouter hook from Next.js for accessing the router object.
 import React, { useEffect, useState } from 'react'; // Import React, useEffect, and useState from the React library.
 import { getEventDetails } from '../../api/mergedData'; // Import the getEventDetails function from the specified API file.
-import DateCard from '../../components/DateCard'; // Import the DateCard component from the specified file.
+import DateCard from '../../components/dateCard'; // Import the DateCard component from the specified file.
 
 export default function ViewEvent() { // Define the ViewEvent component function.
   const [eventDetails, setEventDetails] = useState({}); // Declare state variable eventDetails and a function to update it using the useState hook.
