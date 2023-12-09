@@ -24,15 +24,15 @@ function ShowEvents() { // Define the ShowEvents component function.
   }, []); // Specify an empty dependency array to ensure the effect runs only once when the component mounts.
 
   return (
-    <div className="text-center my-4"> {/* Container div with text alignment and margin styles. */}
+    <div className="text-center my-4">
       <h1>My Events</h1>
-      <div className="d-flex flex-wrap"> {/* Container div with display and flex-wrap styles. */}
-        {events.map((event) => ( // Map through events array and render an EventCard component for each event.
+      <div className="d-flex flex-wrap">
+        {events.map((event) => (
           <EventCard
-            key={event.firebaseKey} // assign a unique identifier (firebaseKey) to the rendered 'EventCard'
-            eventObj={event} // Pass the entire 'event' object as the prop named 'eventObj' to the 'EventCard' component.
-            onUpdate={getAllTheEvents} // Provide the 'getAllTheEvents' function as a prop named 'onUpdate' to the 'EventCard'. This function is intendeed to be called when an update occurs within the EventCard component.
-            imageUrls={event.dates.map((date) => date.image)} // Generate an array of image URLs from the 'dates' property of the 'event' object and pass it as the prop named 'imageUrls' to the 'EventCard component. This array represents images associated with the event's dates.
+            key={event.firebaseKey}
+            eventObj={event}
+            onUpdate={getAllTheEvents}
+            imageUrls={event.dates.map((date) => date.image)}
           />
         ))}
       </div>

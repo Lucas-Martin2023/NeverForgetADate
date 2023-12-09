@@ -29,15 +29,13 @@ function EventCard({ eventObj, onUpdate, imageUrls }) { // Define the EventCard 
             style={{ width: '200px', height: '150px', margin: '5px' }} // Apply inline styles to the img element.
           />
         ))}
-        <Link href={`/event/${eventObj.firebaseKey}`} passHref> {/* Define a Next.js link to navigate to the detailed view of the event. */}
-          <Button variant="primary" className="m-2">VIEW</Button> {/* Render a primary variant Button for viewing the event. */}
+        <Link href={`/event/${eventObj.firebaseKey}`} passHref>
+          <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
-        <Link href={`/event/edit/${eventObj.firebaseKey}`} passHref> {/* Define a Next.js link to navigate to the edit view of the event. */}
-          <Button variant="info">EDIT</Button> {/* Render an info variant Button for editing the event. */}
+        <Link href={`/event/edit/${eventObj.firebaseKey}`} passHref>
+          <Button variant="info">EDIT</Button>
         </Link>
-        <Button variant="danger" onClick={deleteEvent} className="m-2"> {/* Render a danger variant Button for deleting the event, with the deleteEvent function as the onClick handler. */}
-          DELETE
-        </Button>
+        <Button variant="danger" onClick={deleteEvent} className="m-2">DELETE</Button>
       </Card.Body>
     </Card>
   );
