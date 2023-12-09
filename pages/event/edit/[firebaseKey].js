@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'; // Import React, useEffect, and useState from the React library.
 import { useRouter } from 'next/router'; // Import the useRouter hook from Next.js for accessing the router object.
 import { getSingleEvent } from '../../../api/eventData'; // Import the getSingleEvent function from the specified API file.
-import EventForm from '../../../components/forms/EventForm'; // Import the EventForm component from the specified file.
+import EventForm from '../../../components/forms/eventForm';
 
 export default function EditEvent() { // Define the EditEvent component function.
   const [editItem, setEditItem] = useState({}); // Declare state variable editItem and a function to update it using the useState hook.

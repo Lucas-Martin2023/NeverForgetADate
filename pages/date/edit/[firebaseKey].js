@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { getSingleDate } from '../../../api/dateData';
-import DateForm from '../../../components/forms/DateForm';
+import DateForm from '../../../components/forms/dateForm';
 
 export default function EditDate() { // Define the EditDate component function.
   const [editItem, setEditItem] = useState({}); // Declare state variable editItem and a function to update it using the useState hook.
