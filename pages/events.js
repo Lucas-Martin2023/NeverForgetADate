@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'; // Import React, useEffect, and useState from the React library.
 import { getAllEvents, getEventDates } from '../api/eventData'; // Import the getAllEvents and getEventDates functions from the specified API file.
 import { useAuth } from '../utils/context/authContext'; // Import the useAuth hook from the specified context file.
-import EventCard from '../components/eventCard'; // Import the EventCard component from the specified file.
+import EventCard from '../components/EventCard'; // Import the EventCard component from the specified file.
 
 function ShowEvents() { // Define the ShowEvents component function.
   const [events, setEvents] = useState([]); // Declare state variable events and a function to update it using the useState hook.
