@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router'; // Import the useRouter hook from Next.js for accessing the router object.
-import PropTypes from 'prop-types'; // Import PropTypes library for defining component prop types.
-import { Button, Form } from 'react-bootstrap'; // Import Button and Form components from the react-bootstrap library.
-import { createEvent, updateEvent, getAllEvents } from '../../api/eventData'; // Import createEvent, updateEvent, and getAllEvents functions from the specified API file.
-import { useAuth } from '../../utils/context/authContext'; // Import the useAuth hook from the specified context file.
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
+import { Button, Form } from 'react-bootstrap';
+import { createEvent, updateEvent } from '../../api/eventData';
+import { useAuth } from '../../utils/context/authContext';
 
-const intialState = { // Defines the initial state for formInput.
+const intialState = {
   title: '',
   date: '',
 };
 
-// defining state variables, pulling in router and pulling in user.
-function EventForm({ obj }) { // Define the EventForm component function, which takes one prop: obj. destructuring is happening. you are saying what you need from the object.
-  const [formInput, setFormInput] = useState(intialState); // Define state variable formInput to manage form input values, initialized with initialState. form input is initial state, setforminput is what it is changed to. state management for the component.
-  const [setEvents] = useState([]); // Define state variable events to manage an array of events.
-  const router = useRouter(); // Access the router object using the useRouter hook.
-  const { user } = useAuth(); // Access the user object from the authentication context using the useAuth hook... fetch and find the user. this is how we get the user data. destructuring is happening.
+function EventForm({ obj }) {
+  const [formInput, setFormInput] = useState(intialState);
+  const router = useRouter();
+  const { user } = useAuth();
 
   useEffect(() => {
-    getAllEvents(user.uid).then(setEvents); // Fetch events associated with the user when the user changes.
     if (obj.firebaseKey) setFormInput(obj); // If obj has a firebaseKey (indicating an update), set the formInput state with the obj details. if obj has a firebasekey it will update the form vs if no firebasekey, it will do the create form
   }, [obj, user]); // you are telling useEffect to pay attention to that array and the user is the user that is logged in. it tells ueseffect to run again if anything in dependancy array changes. obj is a dependancy array.
 
@@ -34,7 +31,7 @@ function EventForm({ obj }) { // Define the EventForm component function, which 
     e.preventDefault(); // Prevent the default form submission behavior. you dont want to lose the values. it prevents the refresh of the page
 
     if (obj.firebaseKey) { // If obj has a firebaseKey (indicating an update), update the event.
-      updateEvent(formInput).then(() => router.push('/events/')); // Call the updateEvent function with the formInput and navigate to the events page.
+      updateEvent(formInput).then(() => router.push('/events')); // Call the updateEvent function with the formInput and navigate to the events page.
     } else { // If obj does not have a firebaseKey (indicating a new event), create a new event.
       const payload = { ...formInput, uid: user.uid }; // Create a payload object with form input values and the user's uid. this puts the uid in the payload.
       createEvent(payload).then(({ name }) => {

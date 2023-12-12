@@ -18,5 +18,9 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #C5FAD5;
+}
+
+.cardBody {
+  background-color: #AA96DA;
 }
