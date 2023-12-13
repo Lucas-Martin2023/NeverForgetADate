@@ -83,7 +83,7 @@ function DateForm({ obj }) {
         <Form.Group className="mb-3" controlId="floatingInput2">
           <Form.Label>Rate the date from 1-5:</Form.Label>
           <Form.Control
-            type="text"
+            type="number"
             placeholder="Enter Date Rating"
             name="rating"
             value={formInput.rating}
@@ -113,7 +113,7 @@ function DateForm({ obj }) {
             onChange={handleChange}
             required
           >
-            <option value="" disabled>Select an event</option>
+            <option value="">Select an event</option>
             {events.map((event) => (
               <option key={event.firebaseKey} value={event.firebaseKey}>
                 {event.title}
@@ -135,7 +135,7 @@ DateForm.propTypes = {
     eventId: PropTypes.string,
     title: PropTypes.string,
     image: PropTypes.string,
-    rating: PropTypes.string,
+    rating: PropTypes.number,
     description: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),

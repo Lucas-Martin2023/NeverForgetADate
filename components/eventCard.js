@@ -14,8 +14,8 @@ function EventCard({ eventObj, onUpdate, imageUrls }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Body className="cardBody">
+    <Card style={{ width: '18rem', margin: '10px' }} className="eventDateCard">
+      <Card.Body className="cardBody" style={{ width: '18rem', margin: '10px', borderRadius: '10px' }}>
         <Card.Title>{eventObj.title}</Card.Title>
         <p className="card-text bold">{eventObj.date} </p>
         {imageUrls.map((imageUrl, index) => (
@@ -25,16 +25,20 @@ function EventCard({ eventObj, onUpdate, imageUrls }) {
             src={imageUrl}
             alt={`${eventObj.title} - Date ${index + 1}`}
             className="card-img-top"
-            style={{ width: '200px', height: '150px', margin: '5px' }}
+            style={
+              {
+                width: '200px', height: '150px', margin: '5px', borderRadius: '10px',
+              }
+            }
           />
         ))}
         <Link href={`/event/${eventObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">VIEW</Button>
+          <Button className="view-button" variant="primary">VIEW</Button>
         </Link>
         <Link href={`/event/edit/${eventObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button className="edit-button" variant="info">EDIT</Button>
         </Link>
-        <Button variant="danger" onClick={deleteEvent} className="m-2">DELETE</Button>
+        <Button className="delete-button" variant="danger" onClick={deleteEvent}>DELETE</Button>
       </Card.Body>
     </Card>
   );

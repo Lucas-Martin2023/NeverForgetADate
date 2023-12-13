@@ -21,17 +21,18 @@ export default function ViewEvent() {
 
   return (
     <>
-      <div className="mt-5 d-flex flex-wrap">
-        <div className="text-white ms-5 details">
-          <h5>
+      <div className="text-center my-4">
+        <div className="text-black ms-5 details">
+          <h1>
             Event Title: {eventDetails.title}
             <br />
             Event Date: {eventDetails.date}
+          </h1>
+          <div className="card-container">
             {eventDetails.dates?.map((date) => (
               <DateCard key={date.firebaseKey} dateObj={date} onUpdate={getEDetails} />
             ))}
-          </h5>
-          <br />
+          </div>
         </div>
         <br />
       </div>

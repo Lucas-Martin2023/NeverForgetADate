@@ -8,10 +8,10 @@ import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
-    <Navbar style={{ backgroundColor: '#FFFFD2' }} collapseOnSelect expand="lg" variant="dark">
+    <Navbar style={{ backgroundColor: '#666F80' }} collapseOnSelect expand="lg" variant="dark">
       <Container>
         <Link passHref href="/events">
-          <Navbar.Brand>NFAD</Navbar.Brand>
+          <Navbar.Brand className="nfad-nav">Never Forget A Date</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">

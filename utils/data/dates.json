@@ -5,7 +5,7 @@
     "eventId": "-NiznbjIqEoRsOpi9VbZ",
     "title": "Sunset Bike Ride",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgRR15js1wBvTiCtRIV25pJfOGziq6W_s_Q&usqp=CAU",
-    "rating": "2",
+    "rating": 2,
     "description": "We had a great time even though I hate riding bikes."
   },
   "-NizoR9erEbFQP2_CLU3": {
@@ -14,7 +14,7 @@
     "eventId": "-NiznbjIqEoRsOpi9VbZ",
     "title": "Colorado Snowboarding",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShknxCjgTgmZ6GQxeZxnUgksRCfIkuJp6Qeg&usqp=CAU",
-    "rating": "3",
+    "rating": 3,
     "description": "Snowboarding was so much fun but it was so cold. Next time we are gonna bundle up better."
   },
   "-NizoR9gZtp8sTei7HGW": {
@@ -23,7 +23,7 @@
     "eventId": "-NiznbjKVCa-vO8ovPg-",
     "title": "Christmas Party",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWSnTkulEJQg5PA0a51nWAC82MpucKpA7PrQ&usqp=CAU",
-    "rating": "3",
+    "rating": 3,
     "description": "Loved hanging out with all of our friends for Christmas. She had a beautiful black dress on."
   },
   "-NizoR9icOjlVfd6QX2J": {
@@ -32,7 +32,7 @@
     "eventId": "-NiznbjJDLGcW8szpde7",
     "title": "Fujiyama Sushi",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgiH3pjX9VDSlv8whC9i0rz_SpxCt0Nr4OMQ&usqp=CAU",
-    "rating": "2",
+    "rating": 2,
     "description": "Sushi sucked! We thought it was gonna be great because Sally recommended it to us but she was wrong!"
   },
   "-NizoR9k6nvOv-MQMjO-": {
@@ -41,7 +41,7 @@
     "eventId": "-NiznbjMetmoZYvXZIqX",
     "title": "Taylor Smift Concert",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR788LaQrZwGTsr7hh7gk5AcG9JxK_aMGCa_g&usqp=CAU",
-    "rating": "1",
+    "rating": 1,
     "description": "This cover band of Taylor Swift was terrible. She didn't een know how to sing at all!"
   },
   "-Nj-4JA7tvPP-5iOQn-v": {
@@ -50,7 +50,7 @@
     "eventId": "-NiznbjJDLGcW8szpde7",
     "title": "Watched Moana",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABqLHQIOGptYRpwMtTH_0G3EleySHiFXlmQ&usqp=CAU",
-    "rating": "1",
+    "rating": 1,
     "description": "Moana is by far my favorite movie. Baby Moana was so cute!"
   }
 }
