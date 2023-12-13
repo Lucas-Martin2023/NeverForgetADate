@@ -14,16 +14,18 @@ function DateCard({ dateObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Body className="cardBody">
+    <Card style={{ width: '18rem', margin: '10px' }} className="eventDateCard">
+      <Card.Body className="cardBody" style={{ width: '18rem', margin: '10px', borderRadius: '10px' }}>
         <Card.Title>{dateObj.title}</Card.Title>
-        <Card.Img variant="top" src={dateObj.image} alt={dateObj.title} style={{ height: '400px' }} />
+        <div className="card-image-container">
+          <Card.Img variant="top" src={dateObj.image} alt={dateObj.title} className="card-image" style={{ width: '200px', height: '150px', borderRadius: '10px' }} />
+        </div>
         <p className="card-text bold">Rating: {dateObj.rating} star</p>
         <p className="card-text bold">{dateObj.description} </p>
         <Link href={`/date/edit/${dateObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button className="edit-button" variant="info">EDIT</Button>
         </Link>
-        <Button variant="danger" onClick={deleteADate} className="m-2">
+        <Button className="delete-button" variant="danger" onClick={deleteADate}>
           DELETE
         </Button>
       </Card.Body>

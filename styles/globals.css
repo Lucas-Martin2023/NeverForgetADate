@@ -18,9 +18,74 @@ a {
 }
 
 body {
-  background-color: #C5FAD5;
+  background-color: #C3C8D3;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cardBody {
-  background-color: #AA96DA;
+  background-color: #f74464;
+}
+
+.eventDateCard {
+  perspective: 1000px;
+  background-color: #666F80;
+  margin: 5px;
+}
+
+.card-image-container {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-image-container:hover {
+  transform: rotateY(180deg);
+}
+
+.view-button {
+  background-color: #c4c4c4;
+  color: white;
+  border-color: black;
+  margin: 1%;
+  font-weight: bold;
+}
+
+.view-button:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.edit-button {
+  background-color: #6a7285;
+  color: white;
+  border-color: black;
+  margin: 1%;
+  font-weight: bold;
+}
+
+.edit-button:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.delete-button {
+  background-color: #374258;
+  color: white;
+  border-color: black;
+  margin: 1%;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.nfad-nav {
+  color: black;
+  font-weight: bold;
 }

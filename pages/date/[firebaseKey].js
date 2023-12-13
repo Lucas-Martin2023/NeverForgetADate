@@ -20,7 +20,7 @@ export default function ViewDate() {
         <div className="d-flex flex-column">
           <img src={dateDetails.image} alt={dateDetails.title} style={{ width: '300px' }} />
         </div>
-        <div className="text-white ms-5 details">
+        <div className="ms-5 details">
           <h5>
             {dateDetails.title}
           </h5>
