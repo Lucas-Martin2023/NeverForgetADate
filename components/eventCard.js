@@ -16,7 +16,7 @@ function EventCard({ eventObj, onUpdate, imageUrls }) {
   return (
     <Card style={{ width: '18rem', margin: '10px' }} className="eventDateCard">
       <Card.Body className="cardBody" style={{ width: '18rem', margin: '10px', borderRadius: '10px' }}>
-        <Card.Title>{eventObj.title}</Card.Title>
+        <Card.Title style={{ textDecoration: 'underline' }}>{eventObj.title}</Card.Title>
         <p className="card-text bold">{eventObj.date} </p>
         {imageUrls.map((imageUrl, index) => (
           <img

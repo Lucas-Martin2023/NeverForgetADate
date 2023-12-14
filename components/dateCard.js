@@ -16,7 +16,7 @@ function DateCard({ dateObj, onUpdate }) {
   return (
     <Card style={{ width: '18rem', margin: '10px' }} className="eventDateCard">
       <Card.Body className="cardBody" style={{ width: '18rem', margin: '10px', borderRadius: '10px' }}>
-        <Card.Title>{dateObj.title}</Card.Title>
+        <Card.Title style={{ textDecoration: 'underline' }}>{dateObj.title}</Card.Title>
         <div className="card-image-container">
           <Card.Img variant="top" src={dateObj.image} alt={dateObj.title} className="card-image" style={{ width: '200px', height: '150px', borderRadius: '10px' }} />
         </div>
@@ -37,7 +37,7 @@ DateCard.propTypes = {
   dateObj: PropTypes.shape({
     title: PropTypes.string,
     image: PropTypes.string,
-    rating: PropTypes.string,
+    rating: PropTypes.number,
     description: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
