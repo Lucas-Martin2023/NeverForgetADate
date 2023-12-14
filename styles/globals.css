@@ -57,6 +57,7 @@ body {
 .view-button:hover {
   background-color: #FFFFFF;
   color: black;
+  border-color: black;
 }
 
 .edit-button {
@@ -70,6 +71,33 @@ body {
 .edit-button:hover {
   background-color: #FFFFFF;
   color: black;
+  border-color: black;
+}
+
+.submitEventButton {
+  background-color: #374258;
+  color: white;
+  border-color: black;
+  font-weight: bold;
+}
+
+.submitEventButton:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: black;
+}
+
+.submitDateButton {
+  background-color: #374258;
+  color: white;
+  border-color: black;
+  font-weight: bold;
+}
+
+.submitDateButton:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: black;
 }
 
 .delete-button {
@@ -83,6 +111,31 @@ body {
 .delete-button:hover {
   background-color: #FFFFFF;
   color: black;
+  border-color: black;
+}
+
+.signInBtn {
+  background-color: #f74464;
+  border-color: black;
+  font-weight: bold;
+}
+
+.signInBtn:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: black;
+}
+
+.signoutBtn {
+  background-color: #f74464;
+  border-color: black;
+  font-weight: bold;
+}
+
+.signoutBtn:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: black;
 }
 
 .nfad-nav {

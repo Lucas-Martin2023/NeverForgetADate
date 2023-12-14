@@ -9,7 +9,7 @@ import { useAuth } from '../../utils/context/authContext';
 const initialState = {
   title: '',
   image: '',
-  rating: '',
+  rating: 0,
   description: '',
 };
 function DateForm({ obj }) {
@@ -68,7 +68,7 @@ function DateForm({ obj }) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="floatingInput1">
+        <Form.Group className="mb-3" controlId="floatingInput2">
           <Form.Label>Put a picture from the date:</Form.Label>
           <Form.Control
             type="url"
@@ -80,8 +80,8 @@ function DateForm({ obj }) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="floatingInput2">
-          <Form.Label>Rate the date from 1-5:</Form.Label>
+        <Form.Group className="mb-3" controlId="floatingInput3">
+          <Form.Label>Rate the date from 0-5:</Form.Label>
           <Form.Control
             type="number"
             placeholder="Enter Date Rating"
@@ -92,7 +92,7 @@ function DateForm({ obj }) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="floatingInput3">
+        <Form.Group className="mb-3" controlId="floatingInput4">
           <Form.Label>Tell us about the date:</Form.Label>
           <Form.Control
             type="text"
@@ -122,7 +122,7 @@ function DateForm({ obj }) {
           </Form.Select>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button className="submitDateButton" variant="primary" type="submit">
           {obj.firebaseKey ? 'Update Date' : 'Submit Date'}
         </Button>
       </Form>

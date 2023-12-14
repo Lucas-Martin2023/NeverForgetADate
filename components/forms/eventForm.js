@@ -48,7 +48,7 @@ function EventForm({ obj }) {
       <br />
       <h1>Add An Event</h1> {/* Render a heading for the event form. */}
       <Form onSubmit={handleSubmit}> {/* Render a form with the handleSubmit function as the onSubmit handler. */}
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="floatingInput1">
           <Form.Label>Title</Form.Label> {/* Render a label for the title input. */}
           <Form.Control
             type="text"
@@ -60,7 +60,7 @@ function EventForm({ obj }) {
           /> {/* Render an input field for the title with specific attributes and event handlers. */}
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3" controlId="floatingInput2">
           <Form.Label>Date</Form.Label> {/* Render a label for the date input. */}
           <Form.Control
             type="date"
@@ -72,7 +72,7 @@ function EventForm({ obj }) {
             required
           /> {/* Render an input field for the date with specific attributes and event handlers. */}
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="submitEventButton" variant="primary" type="submit">
           {obj.firebaseKey ? 'Update Event' : 'Submit Event'}
         </Button> {/* Render a submit button with a variant based on whether it's an update or a new event. */}
       </Form>

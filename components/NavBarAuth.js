@@ -28,7 +28,7 @@ export default function NavBar() {
             <Link passHref href="/date/new">
               <Nav.Link>Add Date</Nav.Link>
             </Link>
-            <Button type="button" className="btn-danger" onClick={signOut}>
+            <Button type="button" className="signoutBtn" onClick={signOut}>
               Sign Out
             </Button>
           </Nav>
