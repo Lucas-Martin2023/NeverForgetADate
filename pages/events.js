@@ -21,6 +21,7 @@ function ShowEvents() {
 
   useEffect(() => {
     getAllTheEvents();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
