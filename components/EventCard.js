@@ -13,17 +13,11 @@ function EventCard({ eventObj, onUpdate, imageUrls }) {
     }
   };
 
-  const formattedDate = new Date(eventObj.date).toLocaleDateString('en-US', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric',
-  });
-
   return (
     <Card style={{ width: '18rem', margin: '10px' }} className="eventDateCard">
       <Card.Body className="cardBody" style={{ width: '18rem', margin: '10px', borderRadius: '10px' }}>
         <Card.Title style={{ textDecoration: 'underline' }}>{eventObj.title}</Card.Title>
-        <p className="card-text bold">{formattedDate} </p>
+        <p className="card-text bold">{eventObj.date} </p>
         {imageUrls.map((imageUrl, index) => (
           <img
             // eslint-disable-next-line react/no-array-index-key

@@ -20,7 +20,7 @@ function DateCard({ dateObj, onUpdate }) {
         <div className="card-image-container">
           <Card.Img variant="top" src={dateObj.image} alt={dateObj.title} className="card-image" style={{ width: '200px', height: '150px', borderRadius: '10px' }} />
         </div>
-        <p className="card-text bold">Rating: {dateObj.rating} star</p>
+        <p className="card-text bold">Rating: {dateObj.rating}</p>
         <p className="card-text bold">{dateObj.description} </p>
         <Link href={`/date/edit/${dateObj.firebaseKey}`} passHref>
           <Button className="edit-button" variant="info">EDIT</Button>
@@ -37,7 +37,7 @@ DateCard.propTypes = {
   dateObj: PropTypes.shape({
     title: PropTypes.string,
     image: PropTypes.string,
-    rating: PropTypes.number,
+    rating: PropTypes.string,
     description: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
