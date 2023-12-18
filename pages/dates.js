@@ -19,7 +19,7 @@ function ShowDates() {
 
   return (
     <div className="text-center my-4">
-      <h1>🤍My Dates🤍</h1>
+      <h1>❤️My Dates❤️</h1>
       <div className="d-flex flex-wrap">
         {dates.map((date) => (
           <DateCard

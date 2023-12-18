@@ -26,7 +26,7 @@ function ShowEvents() {
 
   return (
     <div className="text-center my-4">
-      <h1>🤍My Events🤍</h1>
+      <h1>❤️My Events❤️</h1>
       <div className="d-flex flex-wrap">
         {events.map((event) => (
           <EventCard
